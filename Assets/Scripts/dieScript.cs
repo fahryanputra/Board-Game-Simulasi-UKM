@@ -5,6 +5,10 @@ using UnityEngine;
 public class dieScript : MonoBehaviour {
 
 	public Sprite[] dieSides;
+	public SpriteRenderer dieButton;
+	public Sprite dieButtonInactive;
+	public Sprite dieButtonActive;
+
 	private SpriteRenderer render;
 
 	// Use this for initialization
@@ -13,11 +17,12 @@ public class dieScript : MonoBehaviour {
 		// dieSides = Resources.LoadAll<Sprite> ("Sprites/DieSides/");
 		// render.sprite = dieSides [6];
 	}
-
+		
 	private void OnMouseDown() {
 		if (gameController.dieRollAllowed) {
 			// Debug.Log ("clicked");
 			StartCoroutine ("DieRoll");
+			StartCoroutine ("ButtonPress");
 		}
 	}
 
@@ -37,5 +42,11 @@ public class dieScript : MonoBehaviour {
 		gameController.MovePlayer ();
 
 		gameController.dieRollAllowed = true;
+	}
+
+	private IEnumerator ButtonPress() {
+		dieButton.sprite = dieButtonActive;
+		yield return new WaitForSeconds (0.15f);
+		dieButton.sprite = dieButtonInactive;
 	}
 }
