@@ -8,6 +8,9 @@ public class gameMenuController : MonoBehaviour {
 	public GameObject eventMenu;
 	public Text eventDescriptionText;
 
+	public GameObject eventMilestoneFlag;
+	public GameObject outcomeMilestoneFlag;
+
 	public GameObject chanceNoOptionMenu;
 	public Text chanceNoOptionNameText;
 	public Text chanceNoOptionDescText;
@@ -63,13 +66,18 @@ public class gameMenuController : MonoBehaviour {
 
 	void EnableEventUI () {
 		eventMenu.SetActive (true);
+		if (gameController.onMilestoneSqure == true) {
+			eventMilestoneFlag.SetActive (true);
+		} else {
+			eventMilestoneFlag.SetActive (false);
+		}
 		gameController.dieRollAllowed = false;
 	}
 
 	void DisableEventUI () {
 		eventMenu.SetActive (false);
 	}
-
+		
 	void EnableChanceUI () {
 		if (gameController.choosenChance.hasOptions == true) {
 			chanceOptionMenu.SetActive (true);
@@ -87,6 +95,11 @@ public class gameMenuController : MonoBehaviour {
 
 	void EnableOutcomeUI () {
 		outcomeMenu.SetActive (true);
+		if (gameController.onMilestoneSqure == true) {
+			outcomeMilestoneFlag.SetActive (true);
+		} else {
+			outcomeMilestoneFlag.SetActive (false);
+		}
 		gameController.dieRollAllowed = false;
 	}
 

@@ -21,6 +21,7 @@ public class gameController : MonoBehaviour {
 	public static bool showOutcomeUI = false;
 	public static bool showTakeLoanUI = false;
 	public static bool showWinUI = false;
+	public static bool onMilestoneSqure = false;
 
 	public static Chance choosenChance;
 
@@ -35,7 +36,8 @@ public class gameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (boardSquaresIndex > playerPosition + dieNumber || (boardSquaresIndex != 0 && boardSquares [boardSquaresIndex - 1].GetComponent<Event> ().isMilestone == true)) {
+		bool milestoneSquare = boardSquares [boardSquaresIndex - 1].GetComponent<Event> ().isMilestone;
+		if (boardSquaresIndex > playerPosition + dieNumber || (boardSquaresIndex != 0 && milestoneSquare == true)) {
 			allowPlayerMovement = false;
 			playerPosition = boardSquaresIndex - 1;
 
@@ -45,6 +47,11 @@ public class gameController : MonoBehaviour {
 				choosenChance.ActivateChance ();
 			} else {
 				showEventUI = true;
+				if (milestoneSquare == true) {
+					onMilestoneSqure = true;
+				} else {
+					onMilestoneSqure = false;
+				}
 				boardSquares [playerPosition].GetComponent<Event> ().ActivateEvent ();
 			}
 

@@ -25,10 +25,10 @@ public class playerStats : MonoBehaviour {
 	}
 
 	void Update () {
-		cashText.text = "Uang: Rp" + cash.ToString ();
-		creativityText.text = "Kreatifitas: " + creativity.ToString ();
-		communicationText.text = "Komunikasi: " + communication.ToString ();
-		intelligenceText.text = "Kecerdasan: " + intelligence.ToString ();
-		qualityText.text = "Kualitas: " + quality.ToString ();
+		cashText.text = "Rp " + cash.ToString ();
+		creativityText.text = creativity.ToString ();
+		communicationText.text = communication.ToString ();
+		intelligenceText.text = intelligence.ToString ();
+		qualityText.text = quality.ToString ();
 	}
 }
