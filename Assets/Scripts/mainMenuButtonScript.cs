@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class mainMenuButtonScript : MonoBehaviour {
 
+	public GameObject tutorialMenu;
+
 	public void PlayButton () {
 		SceneManager.LoadScene ("stat allocation");
 	}
@@ -17,5 +19,13 @@ public class mainMenuButtonScript : MonoBehaviour {
 	public void QuitButton () {
 		Application.Quit ();
 		Debug.Log ("Application quit");
+	}
+
+	public void TutorialButton () {
+		tutorialMenu.SetActive (true);
+	}
+
+	public void OkButton () {
+		tutorialMenu.SetActive (false);
 	}
 }
