@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameUIButtonScript : MonoBehaviour {
 
@@ -31,6 +32,10 @@ public class gameUIButtonScript : MonoBehaviour {
 	public void DismissTakeLoanUI () {
 		gameController.showTakeLoanUI = false;
 		gameController.showOutcomeUI = true;
+	}
+
+	public void DismissWinUI () {
+		SceneManager.LoadScene ("main menu");
 	}
 
 	public void TakeLoan10 () {

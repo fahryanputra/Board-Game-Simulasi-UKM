@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class statAllocation : MonoBehaviour {
 
-	public static int creativityStat = 0;
-	public static int communicationStat = 0;
-	public static int intelligenceStat = 0;
+	public static int creativityStat;
+	public static int communicationStat;
+	public static int intelligenceStat ;
 
 	public int statPoint = 10;
 
@@ -18,6 +18,12 @@ public class statAllocation : MonoBehaviour {
 	public Text statPointText;
 
 	public Button confirmButton;
+
+	void Awake () {
+		creativityStat = 0;
+		communicationStat = 0;
+		intelligenceStat = 0;
+	}
 
 	void Update () {
 		creativityStatText.text = creativityStat.ToString ();

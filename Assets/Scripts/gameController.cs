@@ -11,24 +11,39 @@ public class gameController : MonoBehaviour {
 	public static GameObject[] chanceCards;
 	public GameObject[] setChanceCards;
 
-	public static int boardSquaresIndex = 0;
-	public static int playerPosition = 0;
+	public static int boardSquaresIndex;
+	public static int playerPosition;
 	public static int dieNumber;
-	public static bool dieRollAllowed = true;
-	public static bool allowPlayerMovement = false;
-	public static bool showEventUI = false;
-	public static bool showChanceUI = false;
-	public static bool showOutcomeUI = false;
-	public static bool showTakeLoanUI = false;
-	public static bool showWinUI = false;
-	public static bool onMilestoneSqure = false;
+	public static bool dieRollAllowed;
+	public static bool allowPlayerMovement;
+	public static bool showEventUI;
+	public static bool showChanceUI;
+	public static bool showOutcomeUI;
+	public static bool showTakeLoanUI;
+	public static bool showWinUI;
+	public static bool onMilestoneSqure;
 
 	public static Chance choosenChance;
+
+	void Awake () {
+		boardSquaresIndex = 0;
+		playerPosition = 0;
+		dieRollAllowed = true;
+		allowPlayerMovement = false;
+		showEventUI = false;
+		showChanceUI = false;
+		showOutcomeUI = false;
+		showTakeLoanUI = false;
+		showWinUI = false;
+		onMilestoneSqure = false;
+	}
 
 	// Use this for initialization
 	void Start () {
 		boardSquares = setBoardSquares;
 		chanceCards = setChanceCards;
+
+		showWinUI = false;
 
 		player = GameObject.FindGameObjectWithTag ("Player");
 		allowPlayerMovement = false;
@@ -54,16 +69,10 @@ public class gameController : MonoBehaviour {
 				}
 				boardSquares [playerPosition].GetComponent<Event> ().ActivateEvent ();
 			}
-
+				
 			// dieRollAllowed = true;
 			boardSquares [playerPosition].GetComponent<Event> ().isMilestone = false;
 			// Debug.Log ("showChanceUI: " + showChanceUI);
-		}
-
-		if (boardSquares.Length == playerPosition + 1) {
-			// Debug.Log ("Player Position: " + playerPosition);
-			allowPlayerMovement = false;
-			showWinUI = true;
 		}
 	}
 

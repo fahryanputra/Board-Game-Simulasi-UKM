@@ -18,6 +18,12 @@ public class playerStats : MonoBehaviour {
 	public Text intelligenceText;
 	public Text qualityText;
 
+	public Text cashWinText;
+	public Text creativityWinText;
+	public Text communicationWinText;
+	public Text intelligenceWinText;
+	public Text qualityWinText;
+
 	void Start () {
 		creativity = statAllocation.creativityStat;
 		communication = statAllocation.communicationStat;
@@ -30,5 +36,11 @@ public class playerStats : MonoBehaviour {
 		communicationText.text = communication.ToString ();
 		intelligenceText.text = intelligence.ToString ();
 		qualityText.text = quality.ToString ();
+
+		cashWinText.text = "Rp " + cash.ToString ();
+		creativityWinText.text = creativity.ToString ();
+		communicationWinText.text = communication.ToString ();
+		intelligenceWinText.text = intelligence.ToString ();
+		qualityWinText.text = quality.ToString ();
 	}
 }
