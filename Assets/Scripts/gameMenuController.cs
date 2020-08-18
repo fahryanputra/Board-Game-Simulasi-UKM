@@ -25,12 +25,7 @@ public class gameMenuController : MonoBehaviour {
 	public Text outcomeText;
 
 	public GameObject takeLoanMenu;
-
 	public GameObject winMenu;
-
-	void Start () {
-		
-	}
 	
 	void Update () {
 		if (gameController.showEventUI == true) {

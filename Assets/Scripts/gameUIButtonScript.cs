@@ -6,36 +6,40 @@ using UnityEngine.SceneManagement;
 
 public class gameUIButtonScript : MonoBehaviour {
 
+	private Animator animator;
 	private Text loanOutcomeText;
+	private float animSpeed;
+
 	protected playerStats stat;
+
+	void Awake () {
+		animator = GetComponent<Animator> ();
+	}
 
 	void Start () {
 		loanOutcomeText = GameObject.Find ("Game Menu Controller").GetComponent<gameMenuController> ().outcomeText;
 		stat = GameObject.Find ("Player").GetComponent<playerStats> ();
+		animSpeed = animator.GetCurrentAnimatorStateInfo (0).length * (1 / animator.GetCurrentAnimatorStateInfo (0).speed);
 	}
 
 	public void DismissEventUI () {
-		gameController.showEventUI = false;
-		gameController.showOutcomeUI = true;
+		StartCoroutine ("EventExit");
 	}
 
 	public void DismisChanceUI () {
-		gameController.showChanceUI = false;
-		gameController.showOutcomeUI = true;
+		StartCoroutine ("ChanceExit");
 	}
 
 	public void DismissOutcomeUI () {
-		gameController.showOutcomeUI = false;
-		gameController.dieRollAllowed = true;
+		StartCoroutine ("OutcomeExit");
 	}
 
 	public void DismissTakeLoanUI () {
-		gameController.showTakeLoanUI = false;
-		gameController.showOutcomeUI = true;
+		StartCoroutine ("LoanExit");
 	}
 
 	public void DismissWinUI () {
-		SceneManager.LoadScene ("main menu");
+		StartCoroutine ("WinExit");
 	}
 
 	public void TakeLoan10 () {
@@ -57,5 +61,39 @@ public class gameUIButtonScript : MonoBehaviour {
 		DismissTakeLoanUI ();
 		stat.cash += 50000000;
 		Debug.Log ("You take 50M Loan");
+	}
+
+	private IEnumerator EventExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
+		gameController.showEventUI = false;
+		gameController.showOutcomeUI = true;
+	}
+
+	private IEnumerator OutcomeExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
+		gameController.showOutcomeUI = false;
+		gameController.dieRollAllowed = true;
+	}
+
+	private IEnumerator ChanceExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
+		gameController.showChanceUI = false;
+		gameController.showOutcomeUI = true;
+	}
+
+	private IEnumerator LoanExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
+		gameController.showTakeLoanUI = false;
+		gameController.showOutcomeUI = true;
+	}
+
+	private IEnumerator WinExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
+		SceneManager.LoadScene ("main menu");
 	}
 }

@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 81805574}
   - component: {fileID: 81805573}
   - component: {fileID: 81805575}
+  - component: {fileID: 81805576}
   m_Layer: 5
   m_Name: Event Menu
   m_TagString: Untagged
@@ -498,6 +499,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234a5942a56ca6a4ea8678f51d5f02a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &81805576
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 81805571}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &83162817
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,6 +840,7 @@ GameObject:
   - component: {fileID: 179106697}
   - component: {fileID: 179106699}
   - component: {fileID: 179106698}
+  - component: {fileID: 179106700}
   m_Layer: 5
   m_Name: Option Chance Card
   m_TagString: Untagged
@@ -885,6 +904,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 179106696}
+--- !u!95 &179106700
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 179106696}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &180621432
 GameObject:
   m_ObjectHideFlags: 0
@@ -3169,6 +3205,7 @@ GameObject:
   - component: {fileID: 392989364}
   - component: {fileID: 392989363}
   - component: {fileID: 392989365}
+  - component: {fileID: 392989366}
   m_Layer: 5
   m_Name: Loan Card
   m_TagString: Untagged
@@ -3242,6 +3279,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 234a5942a56ca6a4ea8678f51d5f02a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &392989366
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 392989361}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &402075113
 GameObject:
   m_ObjectHideFlags: 0
@@ -4564,6 +4618,7 @@ GameObject:
   - component: {fileID: 684407846}
   - component: {fileID: 684407845}
   - component: {fileID: 684407844}
+  - component: {fileID: 684407847}
   m_Layer: 5
   m_Name: Chance Card
   m_TagString: Untagged
@@ -4636,6 +4691,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 684407842}
+--- !u!95 &684407847
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 684407842}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &691151321
 GameObject:
   m_ObjectHideFlags: 0
@@ -5448,6 +5520,7 @@ GameObject:
   - component: {fileID: 809888022}
   - component: {fileID: 809888021}
   - component: {fileID: 809888020}
+  - component: {fileID: 809888023}
   m_Layer: 5
   m_Name: Win Menu
   m_TagString: Untagged
@@ -5524,6 +5597,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 809888018}
+--- !u!95 &809888023
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809888018}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &813860165
 GameObject:
   m_ObjectHideFlags: 0
@@ -9144,6 +9234,7 @@ GameObject:
   - component: {fileID: 1433141638}
   - component: {fileID: 1433141637}
   - component: {fileID: 1433141636}
+  - component: {fileID: 1433141639}
   m_Layer: 5
   m_Name: Outcome Menu
   m_TagString: Untagged
@@ -9169,7 +9260,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.025036, y: -0.000030518}
+  m_AnchoredPosition: {x: 0.025024414, y: -0.000061035156}
   m_SizeDelta: {x: -0, y: 0.00012207}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1433141636
@@ -9216,6 +9307,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1433141634}
+--- !u!95 &1433141639
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433141634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: aa5a806e59612eb48854d6e351b85f3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1448290589
 GameObject:
   m_ObjectHideFlags: 0
