@@ -20,6 +20,7 @@ public class gameUIButtonScript : MonoBehaviour {
 		loanOutcomeText = GameObject.Find ("Game Menu Controller").GetComponent<gameMenuController> ().outcomeText;
 		stat = GameObject.Find ("Player").GetComponent<playerStats> ();
 		animSpeed = animator.GetCurrentAnimatorStateInfo (0).length * (1 / animator.GetCurrentAnimatorStateInfo (0).speed);
+		Debug.Log (animSpeed);
 	}
 
 	public void DismissEventUI () {

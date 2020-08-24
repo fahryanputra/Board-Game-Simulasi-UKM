@@ -6,12 +6,18 @@ using UnityEngine.UI;
 
 public class mainMenuButtonScript : MonoBehaviour {
 
+	private Animator animator;
+	private float animSpeed;
+
 	public GameObject tutorialMenu;
+	public Animator transitionAnim;
+	public float transitionSpeed = 1f;
 
-	public void PlayButton () {
-		SceneManager.LoadScene ("stat allocation");
+	void Awake () {
+		animator = tutorialMenu.GetComponent<Animator> ();
+		animSpeed = 0.25f;
 	}
-
+		
 	public void OptionButton () {
 		Debug.Log ("Show Option");
 	}
@@ -26,6 +32,12 @@ public class mainMenuButtonScript : MonoBehaviour {
 	}
 
 	public void OkButton () {
+		StartCoroutine ("TutorialAnim");
+	}
+
+	private IEnumerator TutorialAnim () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (animSpeed);
 		tutorialMenu.SetActive (false);
 	}
 }
