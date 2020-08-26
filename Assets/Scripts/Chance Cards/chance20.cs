@@ -8,10 +8,10 @@ public class chance20 : Chance {
 		hasOptions = true;
 		chanceName = ("Renovasi");
 
-		chanceDesc = ("Salah satu karyawan anda berkata pada anda bahwa jika anda merenovasi toko agar terlihat lebih menyenangkan secara estetika, " +
-			"toko anda akan lebih banyak didatangi pelanggan");
+		chanceDesc = ("Salah satu karyawan anda berkata pada anda bahwa jika anda merenovasi toko agar toko anda akan lebih banyak didatangi pelanggan");
 		option1Desc = ("Anda memilih untuk mendengarkan karyawan anda dan merenovasi toko anda");
 		option2Desc = ("Anda memilih untuk tidak merenovasi toko anda");
+		SetChanceMenuText ();
 	}
 
 	public override void Option1 () {
@@ -22,8 +22,11 @@ public class chance20 : Chance {
 			RemoveCash (10000000);
 			stat.quality += 1;
 		}
+		SetChanceOutcomeText ();
 	}
 
 	public override void Option2 () {
+		chanceOutcome = ("Tidak ada yang terjadi");
+		SetChanceOutcomeText ();
 	}
 }

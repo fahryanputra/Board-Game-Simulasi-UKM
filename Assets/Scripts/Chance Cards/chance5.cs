@@ -14,5 +14,6 @@ public class chance5 : Chance {
 			"Anda harus membayar denda kepada bank sebesar 100 ribu x jumlah mata dadu");
 		chanceOutcome = ("Uang: -" + value);
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }

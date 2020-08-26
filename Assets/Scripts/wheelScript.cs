@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class wheelScript : MonoBehaviour {
 
+	public GameObject wheelMenu;
+
+	private Animator animator;
+
 	private int randomValue;
 	private float timeInterval;
 	private bool coroutineAllowed;
+
+	void Awake () {
+		animator = wheelMenu.GetComponent<Animator> ();
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +45,14 @@ public class wheelScript : MonoBehaviour {
 		if (Mathf.RoundToInt (transform.eulerAngles.z) % 45 == 0)
 			transform.Rotate (0, 0, 22.5f);
 
+		yield return new WaitForSeconds (1f);
 		coroutineAllowed = true;
+		StartCoroutine (WheelExit ());
+	}
+
+	private IEnumerator WheelExit () {
+		animator.SetTrigger ("exit");
+		yield return new WaitForSeconds (0.25f);
+		gameController.showWheelUI = false;
 	}
 }

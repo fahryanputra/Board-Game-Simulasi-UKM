@@ -13,5 +13,6 @@ public class chance3 : Chance {
 		chanceDesc = ("Bayar pajak 10% dari kekayaan anda");
 		chanceOutcome = ("Uang: -" + value);
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }

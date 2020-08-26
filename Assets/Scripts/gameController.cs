@@ -21,6 +21,7 @@ public class gameController : MonoBehaviour {
 	public static bool showOutcomeUI;
 	public static bool showTakeLoanUI;
 	public static bool showWinUI;
+	public static bool showWheelUI;
 	public static bool onMilestoneSqure;
 
 	public static Chance choosenChance;
@@ -35,6 +36,7 @@ public class gameController : MonoBehaviour {
 		showOutcomeUI = false;
 		showTakeLoanUI = false;
 		showWinUI = false;
+		showWheelUI = false;
 		onMilestoneSqure = false;
 	}
 
@@ -58,7 +60,9 @@ public class gameController : MonoBehaviour {
 
 			if (boardSquares [playerPosition].GetComponent<Event> ().isChance == true) {
 				choosenChance = chanceCards [Random.Range (0, chanceCards.Length)].GetComponent<Chance> ();
+				//Debug.Log (choosenChance);
 				showChanceUI = true;
+				showWheelUI = true;
 				choosenChance.ActivateChance ();
 			} else {
 				showEventUI = true;

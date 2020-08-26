@@ -14,5 +14,6 @@ public class chance9 : Chance {
 			" Bayar tagihan dokter dan rumah sakit sebesar 500 ribu x jumlah mata dadu");
 		chanceOutcome = ("Uang: -" + value);
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }

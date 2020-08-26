@@ -14,5 +14,6 @@ public class chance6 : Chance {
 			"Besarnya bunga adalah 8% dari kekayaan anda");
 		chanceOutcome = ("Uang: -" + value);
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }

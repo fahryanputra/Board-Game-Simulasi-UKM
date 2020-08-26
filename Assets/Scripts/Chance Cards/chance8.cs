@@ -14,5 +14,6 @@ public class chance8 : Chance {
 			" sebesar 1 juta x jumlah mata dadu");
 		chanceOutcome = ("Uang: +" + value);
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }

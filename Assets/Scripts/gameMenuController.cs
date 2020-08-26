@@ -26,6 +26,7 @@ public class gameMenuController : MonoBehaviour {
 
 	public GameObject takeLoanMenu;
 	public GameObject winMenu;
+	public GameObject wheelMenu;
 	
 	void Update () {
 		if (gameController.showEventUI == true) {
@@ -56,6 +57,12 @@ public class gameMenuController : MonoBehaviour {
 			EnableWinUI ();
 		} else {
 			DisableWinUI ();
+		}
+
+		if (gameController.showWheelUI == true) {
+			EnableWheelUI ();
+		} else {
+			DisableWheelUI ();
 		}
 	}
 
@@ -118,5 +125,13 @@ public class gameMenuController : MonoBehaviour {
 
 	void DisableWinUI () {
 		winMenu.SetActive (false);
+	}
+
+	void EnableWheelUI () {
+		wheelMenu.SetActive (true);
+	}
+
+	void DisableWheelUI () {
+		wheelMenu.SetActive (false);
 	}
 }

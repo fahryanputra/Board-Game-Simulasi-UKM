@@ -14,5 +14,6 @@ public class chance4 : Chance {
 			"sekitar untuk melakukan perbaikan");
 		chanceOutcome = ("Uang: -1000000");
 		SetChanceMenuText ();
+		SetChanceOutcomeText ();
 	}
 }
