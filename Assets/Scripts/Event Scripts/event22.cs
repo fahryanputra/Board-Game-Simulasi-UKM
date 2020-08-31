@@ -6,7 +6,7 @@ public class event22 : Event {
 
 	public override void ActivateEvent() {
 		eventDesc = ("Membuka usaha");
-		eventOutcome = ("Membuka usaha");
+		eventOutcome = ("Anda membuka usaha");
 		SetEventMenuText ();
 	}
 }

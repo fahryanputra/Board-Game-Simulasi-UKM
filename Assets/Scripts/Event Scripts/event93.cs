@@ -7,7 +7,7 @@ public class event93 : Event {
 	public override void ActivateEvent() {
 
 		eventDesc = ("Expand service");
-		eventOutcome = ("Expand service");
+		eventOutcome = ("Anda melakukan Expand service");
 		SetEventMenuText ();
 	}
 }
