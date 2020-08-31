@@ -32,7 +32,7 @@ public class dieScript : MonoBehaviour {
 		int randomDieNumber = 0;
 
 		for (int i = 0; i <= 20; i++) {
-			randomDieNumber = Random.Range (1, 1);
+			randomDieNumber = Random.Range (0, 5);
 			render.sprite = dieSides [randomDieNumber];
 			yield return new WaitForSeconds (0.05f);
 		}
